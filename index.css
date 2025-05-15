@@ -1,0 +1,302 @@
+:root {
+  --primary-bg: #0e0e0e;
+  --accent-color: #d4af37;
+  --text-color: #ffffff;
+  --muted-color: #888888;
+  --section-bg: #1c1c1c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* General Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+.header {
+  background-color: #000;
+  padding: 1rem 0;
+  border-bottom: 1px solid #222;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header h1 {
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  letter-spacing: 1px;
+}
+.call {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+.call:hover {
+  color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://png.pngtree.com/thumb_back/fh260/background/20230612/pngtree-barbershop-with-chairs-in-traditional-styles-and-mirrors-in-front-image_2906285.jpg') no-repeat center center/cover;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero-content {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+  border-radius: 10px;
+}
+.hero h2 {
+  font-size: 3rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--muted-color);
+}
+.btn {
+  background-color: var(--accent-color);
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background-color: #b8912d;
+  color: #111;
+}
+
+/* Info Section */
+.info {
+  background-color: var(--section-bg);
+  padding: 4rem 0;
+}
+.info-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+.info-text {
+  flex: 1;
+}
+.info-text h3 {
+  color: var(--accent-color);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.info-text ul {
+  list-style: none;
+}
+.info-text li {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+.info-image {
+  flex: 1;
+}
+.info-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.1);
+}
+
+/* Review Section */
+.review {
+  background-color: #111;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.review blockquote {
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+.review p {
+  color: var(--muted-color);
+}
+
+/* Location Section */
+.location {
+  background-color: var(--section-bg);
+  padding: 4rem 0;
+}
+.location-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.contact-details {
+  flex: 1;
+}
+.contact-details h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+.contact-details p {
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+.map-link {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 1rem;
+}
+.map-link:hover {
+  text-decoration: underline;
+}
+.location iframe {
+  flex: 1;
+  width: 100%;
+  min-height: 300px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+  background-color: #000;
+  color: #666;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  border-top: 1px solid #222;
+}
+
+/* Hover effects */
+a,
+.btn,
+.call,
+.map-link {
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .info-grid,
+  .location-grid {
+    flex-direction: column;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .btn {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .header .container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+}
+
+/* Services */
+.services {
+  background-color: #121212;
+  padding: 4rem 1rem;
+}
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.service-card {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.service-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.service-card h4 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Gallery */
+.gallery {
+  background-color: var(--primary-bg);
+  padding: 4rem 1rem;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Contact */
+.contact {
+  background-color: #121212;
+  padding: 4rem 1rem;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: auto;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+  color: white;
+}
+.contact-form button {
+  align-self: flex-start;
+}
